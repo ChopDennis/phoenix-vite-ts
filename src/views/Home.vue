@@ -7,18 +7,15 @@ const counter = computed(() => store.state.home.count)
 const handleClick = () => {
   store.commit('home/add')
 }
-const msg = ref('Hello Vite.')
+const msg = ref(' The website is temporarily suspended.')
 </script>
 <template>
   <h1>{{ msg }}</h1>
-  <p>{{ counter }}</p>
-
-  <button @click="handleClick">
-    click
-  </button>
-  <button to="login">
-    to
-  </button>
+  <img
+    src="@/assets/icon-phoenix-group.png"
+    width="150"
+    height="150"
+  >
 </template>
 
 <style scoped></style>
