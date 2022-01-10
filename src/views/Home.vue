@@ -7,15 +7,29 @@ const counter = computed(() => store.state.home.count)
 const handleClick = () => {
   store.commit('home/add')
 }
-const msg = ref(' The website is temporarily suspended.')
+const title = ref(' The website is temporarily suspended.')
+const msg = ref('If you have any questions, please contact us - ')
 </script>
 <template>
-  <h1>{{ msg }}</h1>
-  <img
-    src="@/assets/icon-phoenix-group.png"
-    width="150"
-    height="150"
-  >
+  <div class="container mx-auto px-4 flex justify-center  h-screen items-center">
+    <div>
+      <img
+        class="mx-auto"
+        src="@/assets/icon-phoenix-group.png"
+        width="150"
+        height="150"
+      >
+      <h1 class="text-3xl mt-3 font-bold font-serif tracking-tight">
+        {{ title }}
+      </h1>
+      <p class="font-sans font-thin">
+        {{ msg }}<a
+          class="text-blue-500 hover:underline"
+          href="mailto:phoenixgroupasia@gmail.com"
+        >phoenixgroupasia@gmail.com</a>
+      </p>
+    </div>
+  </div>
 </template>
 
 <style scoped></style>
